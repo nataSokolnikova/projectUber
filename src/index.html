@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+  <header>
+    <div class="container-fluid">
+      <div class="row header-top">
+          <nav class="header-top-nav navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid d-flex justify-content-end align-items-center">
+              <button class="header-top-nav__menu-btn navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="header-top-nav__gamburger navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="header-top-nav__ul navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="header-top-nav__a nav-link" aria-current="page" href="#">Главная</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="header-top-nav__a nav-link" href="#">Со своим автомобилем</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="header-top-nav__a nav-link" href="#">На автомобиле компании</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="header-top-nav__a nav-link" href="#">Требования</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="header-top-nav__a nav-link" href="#">Контакты</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="header-top-nav__a nav-link" href="#">Оставить заявку</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+      </div>
+      <div class="row header-bottom">
+        <figure class="figure header-bottom__bg position-relative top-0 start-0 bottom-0 end-0"
+          style="background-image: url('./img/uber_bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+          <div class="header-bottom__contacts position-absolute top-0 start-0 end-0 d-flex flex-column flex-md-row align-items-end align-items-md-center justify-content-end gap-3">
+            <div class="header-bottom__contacts-group">
+              <div class="header-bottom__contacts-text-off d-none d-md-block">
+                <p class="header-bottom__contacts-text text-center">Звоните нам ежедневно</p>
+              </div>
+              <div>
+                <p class="header-bottom__contacts-tel">+38099- 000-000-00</p>
+              </div>
+            </div>
+            <button type="button" class="btn-gradient header-bottom__btn">
+              Заказать звонок
+            </button>
+          </div>
+          <div class="header-bottom__description position-absolute top-50 start-50 d-flex flex-column align-items-center justify-content-between">
+            <div class="header-bottom__info d-flex flex-column align-items-center">
+              <h1>КОМПАНИЯ UBER PARTNERS!</h1>
+              <h3>ПРИГЛАШАЕМ ВОДИТЕЛЕЙ! НА СВОЕМ АВТО!</h3>
+              <br>
+              <div class="header-bottom__text">
+                <p class="text-center header-bottom__paragraph">
+                  Компания UBER динамически развивающаяся. Компания на рынке занимает лидирующее место среди таксомоторных компаний,
+                  Компания абсолютно прозрачная вы можете контролировать все процессы у себя в личном кабинете. Бонуcная
+                  система.Помимо
+                  выполненной работы по заказам, компания начисляет бонусы за пиковое время.
+                  <br><br>
+                  Мы одни из партнеров и зарекомендовали себя
+                  как одна из лучших команд в городе Киев. Водители у нас зарабатывают от 30 000 - 120000 в месяц.
+                </p>
+              </div>
+            </div>
+            <button type="button" class="btn-gradient header-bottom__btn header-bottom__btn-btn-big">
+              Отправить заявку
+            </button>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="row main-first main-section">
+        <div class="col-12 text-center mb-4">
+          <button type="button" class="btn main-section__btn_black">преимущества</button>
+          <h2 class="subtitle main-section__subtitle_black">8 причин начать работать с нами</h2>
+        </div>
+        <div class="container-fluid text-center">
+          <div class="row row-cols-1 row-cols-lg-2">
+            <article class="col main-first__section">
+              <div class="main-first__benefit-card card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="./icons/Rect(3).png" class="img-fluid rounded main-first__icon" alt="...">
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class="card-body text-start">
+                      <h5 class="card-title main-first__title">Никаких наличных, оплата происходит автоматически</h5>
+                      <p class="card-text">Стоимость поездки оплачивается пассажиром с привязанной банковской карты, т.е. нет никаких рисков связанных с перевозкой
+                      наличности как для пассажира, так и для водителя, Вам не нужно искать мелкие деньги для размена.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-first__benefit-card card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="./icons/Rect(4).png" class="img-fluid rounded main-first__icon" alt="...">
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class="card-body text-start">
+                      <h5 class="card-title main-first__title">Высокий доход с гарантированными выплатами</h5>
+                      <p class="card-text">Мы выплачиваем заработную плату на личную банковскую карту водителя! Вам не нужно оформлять ООО, ИП, платить налоги,
+                      подавать декларацию, оплачивать бухгалтерские услуги и ведение банковского счета.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-first__benefit-card card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="./icons/Rect(3).png" class="img-fluid rounded main-first__icon" alt="...">
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class="card-body text-start">
+                      <h5 class="card-title main-first__title">Комфортное, прозрачное и простое подключение</h5>
+                      <p class="card-text">Мы подключаем дистанционно и бесплатно, Вам нет необходимости приезжать к нам! Вы присылаете нам копии документов, мы
+                      регистрируем Вас и присылаем данные для подключения, через 1-2 дня Вы можете начинать работать!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-first__benefit-card card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="./icons/Rect(5).png" class="img-fluid rounded main-first__icon" alt="...">
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class="card-body text-start">
+                      <h5 class="card-title main-first__title">Круглосуточная поддержка</h5>
+                      <p class="card-text">В Uber действует круглосуточная поддержка водителей по электронной почте. Если что-то непонятно, Вы всегда можете задать
+                      вопрос через On-line консультацию.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+                
+            <article class="col main-first__section">
+              <div class="main-first__benefit-card card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="./icons/Rect(3).png" class="img-fluid rounded main-first__icon" alt="...">
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class="card-body text-start">
+                      <h5 class="card-title main-first__title">Комиссия 8% + БОНУСЫ</h5>
+                      <p class="card-text">У нас минимальная комиссия и мы выплачиваем бонусы за каждую поездку, некоторые наши конкуренты оставляют бонусы себе.
+                      Мы работаем честно и с нами водители зарабатывают больше!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-first__benefit-card card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="./icons/Rect(4).png" class="img-fluid rounded main-first__icon" alt="...">
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class="card-body text-start">
+                      <h5 class="card-title main-first__title">Работа в удобное время, никаких графиков</h5>
+                      <p class="card-text">Вы просто нажимаете кнопку выйти на линию для начала работы, когда решите закончить, нажимаете выйти с линии. Вы можете
+                      подраба-
+                      тывать только утром, вечером, в выходные или праздничные дни!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-first__benefit-card card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="./icons/Rect(5).png" class="img-fluid rounded main-first__icon" alt="...">
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class="card-body text-start">
+                      <h5 class="card-title main-first__title">Всегда большое количество заказов</h5>
+                      <p class="card-text">Приложение показывает, где на данный момент больше всего заказов и где действуют повышенные тарифы. У Вас не будет
+                      простоя и холостых пробегов. Наши пассажиры всегда приятные и абсолютно неконфликтные люди, которых приятно возить.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-first__benefit-card card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="./icons/Rect(3).png" class="img-fluid rounded main-first__icon" alt="...">
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class="card-body text-start">
+                      <h5 class="card-title main-first__title">Без шашечек и наклеек</h5>
+                      <p class="card-text">Вам не нужно менять цвет, устанавливать «шашки» на автомобиль и обклеивать его наклейками.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="row main-second main-section">
+      <div class="container">
+        <div class="col-12 text-center mb-4 mt-4">
+          <button type="button" class="btn main-section__btn_black">возможности</button>
+          <h2 class="subtitle main-section__subtitle_black">мобильное приложение убер</h2>
+          <p class="text main-section__text_black">Сделайте заказ, совершите поездку и оплатите ее стоимость, используя свой мобильный телефон</p>
+        </div>
+        <div class="container text-center">
+          <div class="row row-cols-1 row-cols-lg-3 mb-5">
+            <article class="col main-second__teil">
+              <div class="card text-bg-dark main-second__item-card">
+                <img src="./img/Карточка 1.png" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
+                  <h5 class="card-title main-second__name">оформление заказа одним касанием</h5>
+                  <button type="button" class="add-btn">
+                    <img src="./icons/Плюс.png" class="main-second__img-btn" alt="add">
+                  </button>
+                </div>
+              </div>
+              <div class="card text-bg-dark main-second__item-card">
+                <img src="./img/Карточка 4.png" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
+                  <h5 class="card-title main-second__name">безналичная оплата</h5>
+                  <button type="button" class="add-btn">
+                    <img src="./icons/Плюс.png" class="main-second__img-btn" alt="add">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="col main-second__teil">
+              <div class="card text-bg-dark main-second__item-card">
+                <img src="./img/Карточка 2.png" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
+                  <h5 class="card-title main-second__name">надежная подача</h5>
+                  <button type="button" class="add-btn">
+                    <img src="./icons/Плюс.png" class="main-second__img-btn" alt="add">
+                  </button>
+                </div>
+              </div>
+              <div class="card text-bg-dark main-second__item-card">
+                <img src="./img/Карточка 5.png" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
+                  <h5 class="card-title main-second__name">обратная связь</h5>
+                  <button type="button" class="add-btn">
+                    <img src="./icons/Плюс.png" class="main-second__img-btn" alt="add">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="col main-second__teil">
+              <div class="card text-bg-dark main-second__item-card">
+                <img src="./img/Карточка 3.png" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
+                  <h5 class="card-title main-second__name">прозрачные цены</h5>
+                  <button type="button" class="add-btn">
+                    <img src="./icons/Плюс.png" class="main-second__img-btn" alt="add">
+                  </button>
+                </div>
+              </div>
+              <div class="card text-bg-dark main-second__item-card">
+                <img src="./img/Карточка 6.png" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
+                  <h5 class="card-title main-second__name">разделить стоимость поездки</h5>
+                  <button type="button" class="add-btn">
+                    <img src="./icons/Плюс.png" class="main-second__img-btn" alt="add">
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row main-third main-section mb-5">
+      <div class="container">
+        <div class="col-12 text-center mb-4 main-third__promo">
+          <button type="button" class="btn main-section__btn_white">возможности</button>
+          <div class="main-third__block-text">
+            <h2 class="subtitle main-section__subtitle_white">Выбор - отличная штука!</h2>
+            <p class="text main-section__text_white">Закажите автомобиль, который подходит вам по стилю и бюджету</p>
+          </div>
+        </div>
+        <figure class="figure main-third__car">
+          <img src="./img/Автомобиль.png" class="figure-img img-fluid  rounded main-third__img-car" alt="car">
+          <figcaption class="figure-caption text-center main-third__description-car">Машины на каждый день. <br> Лучше, быстрее и дешевле, чем такси</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="row main-fourth main-section">
+      <div class="container">
+        <div class="col-12 text-center mb-4">
+          <button type="button" class="btn main-section__btn_black">возможности</button>
+          <h2 class="subtitle main-section__subtitle_black">условия и требования</h2>
+        </div>
+        <div class="container text-center">
+          <div class="row row-cols-1 row-cols-lg-2 mb-5">
+              <div class="main-fourth__cheklist-info main-fourth__cheklist-info_blue">
+                <h4 class="main-fourth__cheklist-title">УСЛОВИЯ: со своим авто:</h4>
+                <ul class="main-fourth__cheklist">
+                  <li class="main-fourth__cheklist-item">Подключаем к системе UBER под 10%.</li>
+                  <li class="main-fourth__cheklist-item">Ни каких взносов 0%!</li>
+                  <li class="main-fourth__cheklist-item">Можем подключать удаленно без приезда в офис</li>
+                  <li class="main-fourth__cheklist-item">ИП не требуется</li>
+                  <li class="main-fourth__cheklist-item">Заказы распределяются без учета рейтинга ближай-
+                  шим водителям</li>
+                  <li class="main-fourth__cheklist-item">Работа только по безналичному расчету</li>
+                  <li class="main-fourth__cheklist-item">Деньги перечисляем на карту водителю или наличны-
+                  ми в офисе</li>
+                </ul>
+                <p class="main-fourth__cheklist-text">В день заработок составляет 7000-12000</p>
+              </div>
+              <div class="main-fourth__cheklist-info main-fourth__cheklist-info_blue">
+                <h4 class="main-fourth__cheklist-title">УСЛОВИЯ: на авто компании:</h4>
+                <ul class="main-fourth__cheklist">
+                  <li class="main-fourth__cheklist-item">Предоставляем авто без залога.</li>
+                  <li class="main-fourth__cheklist-item">Без ежедневных выплат по аренде</li>
+                  <li class="main-fourth__cheklist-item">Среда пятница и суббота работа на компанию осталь-
+                  ные дни вы работаете на себя</li>
+                </ul>
+              </div>
+              <div class="main-fourth__cheklist-info main-fourth__cheklist-info_red">
+                <h4 class="main-fourth__cheklist-title">ТРЕБОВАНИЕ:</h4>
+                <ul class="main-fourth__cheklist">
+                  <li class="main-fourth__cheklist-item">Наличие автомобиля без рекламы</li>
+                  <li class="main-fourth__cheklist-item">Автомобиль не должен быть желтый и не с желтыми
+                  номерами</li>
+                  <li class="main-fourth__cheklist-item">Машина не старше 3 лет</li>
+                  <li class="main-fourth__cheklist-item">Стаж вождения не менее 3 лет</li>
+                  <li class="main-fourth__cheklist-item">Девайс на системе андроид 4.0 и выше(самсунг)</li>
+                </ul>
+              </div>
+              <div class="main-fourth__cheklist-info main-fourth__cheklist-info_red">
+                <h4 class="main-fourth__cheklist-title">ДОКУМЕНТЫ:</h4>
+                <ul class="main-fourth__cheklist">
+                  <li class="main-fourth__cheklist-item">Права 2 стороны</li>
+                  <li class="main-fourth__cheklist-item">Паспорт лицевая сторона</li>
+                  <li class="main-fourth__cheklist-item">СтС</li>
+                  <li class="main-fourth__cheklist-item">Лицензия (если есть)</li>
+                  <li class="main-fourth__cheklist-item">Номер телефона</li>
+                  <li class="main-fourth__cheklist-item">Номер карты для перечисления денег(указать в письме)!</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row main-fifth main-section">
+      <div class="container d-flex flex-column justify-content-between align-items-center">
+        <div class="col-12 text-center mb-4 mt-4">
+          <button type="button" class="btn main-section__btn_white">города</button>
+          <h2 class="subtitle main-section__subtitle_white">по всему миру</h2>
+          <p class="text main-section__text_white">Мы в Вашем городе и по всему миру</p>
+        </div>
+        <a href="#" class="main-fifth__link-transperent mb-4 mt-auto">посмотреть все города</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row text-center text-lg-start">
+    
+        <div class="col-12 col-lg-4 order-2 order-lg-1 mb-4 mb-lg-0">
+          <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+            <ul class="footer__networks list-unstyled mb-0 d-flex flex-row align-items-center">
+              <li class="footer__networks-icons">
+                <button class="footer__networks-icon">
+                  <img src="./icons/facebook.png" class="footer__networks-icon" alt="fb">
+                </button>
+              </li>
+              <li class="footer__networks-icons">
+                <button class="footer__networks-icon">
+                  <img src="./icons/twitter.png" alt="tw">
+                </button>
+              </li>
+              <li class="footer__networks-icons">
+                <button class="footer__networks-icon">
+                  <img src="./icons/linkedin.png" alt="ld">
+                </button>
+              </li>
+              <li class="footer__networks-icons">
+                <button class="footer__networks-icon">
+                  <img src="./icons/instagram.png" alt="inst">
+                <button>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="col-12 col-lg-4 order-1 order-lg-2 mb-4 mb-lg-0">
+          <ul class="list-unstyled mb-0">
+            <li><a href="#" class="text-reset text-decoration-none d-block mb-2">Главная</a></li>
+            <li><a href="#" class="text-reset text-decoration-none d-block mb-2">О нас</a></li>
+            <li><a href="#" class="text-reset text-decoration-none d-block">Контакты</a></li>
+          </ul>
+        </div>
+    
+        <div class="col-12 col-lg-4 order-3 order-lg-3">
+          <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+            <img src="img/sponsor1.png" alt="Sponsor 1" width="50">
+            <img src="img/sponsor2.png" alt="Sponsor 2" width="50">
+            <img src="img/sponsor3.png" alt="Sponsor 3" width="50">
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

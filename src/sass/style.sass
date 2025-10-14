@@ -1,0 +1,328 @@
+@use 'variables'
+$accent-color: #1EACC7
+$primary-color: #202020
+$secondary-color: #fff
+$tertiary-color: #FF5656
+$bg-color: #212121
+$space-v: 16px
+
+=btn($bg, $color)
+  font-size: 11px
+  color: $color
+  background-color: $bg
+  border-radius: 0
+  margin-top: $space-v
+  margin-bottom: $space-v * 2
+  text-transform: uppercase
+  padding: 10px 10px
+  line-height: 1
+
+=subtitle($color)
+  color: $color
+  text-transform: uppercase
+
+=text($color)
+  color: $color
+
+=checklist($title-color, $check-icon)
+  .main-fourth
+    &__cheklist-title
+      color: $title-color
+      font-weight: 400
+    &__cheklist
+      list-style: none
+      display: flex
+      flex-direction: column
+      gap: 0.5rem
+    &__cheklist-item
+      position: relative
+      padding-left: 35px
+      font-weight: 300
+      font-size: 17px
+      line-height: 1.5
+      text-align: left
+      &::before
+        content: ""
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 21px
+        height: 20px
+        background: url($check-icon) no-repeat center / contain
+      @media (max-width: 992px)
+        font-size: 14px
+    &__cheklist-text
+      color: $title-color
+      text-align: left
+      padding-left: 35px
+      font-size: 17px
+      @media (max-width: 992px)
+        font-size: 14px
+
+
+body
+  font-family: "Roboto", sans-serif
+  font-size: 15px
+  color: #202020
+
+h1
+  font-size: 48px
+  @media (max-width: 992px)
+    font-size: 40px
+
+h2
+  font-size: 38px
+  font-weight: 700
+  @media (max-width: 768px)
+    font-size: 16px
+
+h3
+  font-size: 28px
+  @media (max-width: 992px)
+    font-size: 20px
+
+h4
+  font-size: 22px
+  @media (max-width: 992px)
+    font-size: 19px
+  margin-bottom: 20px
+
+p
+  font-size: 15px
+
+.btn-gradient
+  background: linear-gradient(to bottom, #4CE2FF, #1EACC7)
+
+.header-top-nav
+  background-color: #212121
+  &__menu-btn
+    background: none
+    border: none
+    box-shadow: none
+  &__menu-btn:focus
+    outline: none
+    box-shadow: none;
+  &__menu-btn:active
+    outline: none
+    box-shadow: none;
+  &__ul
+    display: flex
+    gap: 60px
+  &__a
+    color: #fff
+    text-decoration: none
+    transition: color 0.3s;
+
+.header-bottom
+  &__bg
+    color: #fff
+    height: 100vh
+    z-index: 1
+  &__contacts
+    background: rgba(0, 0, 0, .5);
+    z-index: 2
+    width: 100%
+    padding: 1em 9em
+    color: #fff
+    @media (max-width: 992px)
+      padding: 1em 1.5em
+    @media (max-width: 767px)
+      padding: 1em 1.5em
+  &__contacts-group
+    height: 46px
+    @media (max-width: 767px)
+      height: 14px
+  &__contacts-text
+    font-weight: 300
+    font-size: 12px
+    margin: 0
+  &__contacts-tel
+    font-weight: 400
+    font-size: 22px
+    @media (max-width: 768px)
+      font-size: 18px
+  &__description
+    height: 34em
+    width: 62em
+    margin-top: -17em
+    margin-left: -31em
+    color: #fff
+    z-index: 2
+    @media (max-width: 992px)
+      height: 24em
+      width: 46em
+      margin-top: -12em
+      margin-left: -23em
+      text-align: center
+    @media (max-width: 768px)
+      height: 20em
+      width: 20em
+      margin-top: -10em
+      margin-left: -10em
+      text-align: center
+  &__text
+    @media (max-width: 768px)
+      display: none
+  &__paragraph
+    font-size: 18px
+    font-weight: 400
+    @media (max-width: 992px)
+       font-size: 14px
+  &__btn
+    padding: 16px 26px
+    font-weight: 400
+    font-size: 14px
+    text-transform: uppercase
+    color: #fff
+    @media (max-width: 768px)
+      padding: 10px 26px
+  &__btn-btn-big
+    font-size: 18px
+
+.main-section
+  &__btn_black
+    +btn($bg-color, $secondary-color)
+  &__btn_white
+    +btn($secondary-color, $bg-color)
+  &__subtitle_black
+    +subtitle($primary-color)
+  &__subtitle_white
+    +subtitle($secondary-color)
+  &__text_black
+    +text($primary-color)
+  &__text_white
+    +text($secondary-color)
+
+.main-first
+  &__benefit-card
+    border: none
+    min-height: 245px
+  &__icon
+    display: block
+    border-radius: 50%
+    width: 116px
+    height: 116px
+
+.card-title.main-first__title
+  font-size: 17px
+  color: #1EACC7
+
+.main-second
+  border: 1px solid rgba(30, 172, 199, 0.15)
+  background-color: #fff
+  background-image: url('../img/mobile_bg.png')
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  &__item-card
+    border-radius: 0
+    margin-bottom: 18px
+  &__img-btn
+    width: 100%
+    height: 100%
+    border-radius: 50%
+  &__name
+    text-transform: uppercase
+    font-weight: 300
+
+.add-btn
+  border: none
+  padding: 0
+  border-radius: 50%
+
+.main-third
+  border-bottom: 1px solid rgba(30, 172, 199, 0.15)
+  position: relative
+  height: 900px
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    width: 100vw
+    height: 60%
+    background-color: #000
+    z-index: 1
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0
+    width: 100vw
+    height: 40%
+    background-image: url('../img/mobile_bg.png')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    z-index: 1
+  &__promo
+    position: relative
+    z-index: 2
+    top: -5em
+  &__car
+    position: relative
+    z-index: 2
+    height: 30em
+    width: 46em
+    top: 0
+    left: 50%
+    margin-left: -23em
+    @media (max-width: 768px)
+      height: 15em
+      width: 24em
+      margin-left: -12em
+  &__description-car
+    font-size: 17px
+    font-weight: 300
+    color: $primary-color
+  &__block-text
+    @media (max-width: 768px)
+      display: none
+
+  @media (max-width: 768px)
+    height: 100vh
+    &::before
+      height: 100%
+    &::after
+      display: none
+    &__car
+      position: relative
+      z-index: 2
+    &__description-car
+      color: $secondary-color
+
+.main-fourth
+  &__cheklist-info
+    margin-bottom: 60px
+    @media (max-width: 992px)
+      margin-bottom: 40px
+  &__cheklist-info_blue
+    +checklist($accent-color, '../icons/check-blue.png')
+  &__cheklist-info_red
+    +checklist($tertiary-color, '../icons/check-red.png')
+
+.main-fifth
+  background-image: url('../img/world_bg.png')
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  height: 716px
+  &__link-transperent
+    font-size: 15px
+    text-transform: uppercase
+    text-decoration: none
+    cursor: pointer
+    color: $accent-color
+    &:hover
+      text-decoration: underline
+
+.footer
+  &__networks-icon
+    width: 16px
+    height: 16px
+    border-radius: 50%
+    background-color: $bg-color
+    
