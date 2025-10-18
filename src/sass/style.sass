@@ -94,8 +94,17 @@ p
 .btn-gradient
   background: linear-gradient(to bottom, #4CE2FF, #1EACC7)
 
-.header-top-nav
+.header-bg
+  background-image: url('../img/uber_bg.png')
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  width: 100%
+  height: 851px
+
+.header-top
   background-color: #212121
+.header-top-nav
   &__menu-btn
     background: none
     border: none
@@ -114,25 +123,16 @@ p
     text-decoration: none
     transition: color 0.3s;
 
-.header-bottom
+.header-middle
+  background: rgba(0, 0, 0, .5)
   &__bg
     color: #fff
     height: 100vh
-    z-index: 1
   &__contacts
-    background: rgba(0, 0, 0, .5);
-    z-index: 2
-    width: 100%
-    padding: 1em 9em
+    padding: 1em 0
     color: #fff
-    @media (max-width: 992px)
-      padding: 1em 1.5em
-    @media (max-width: 767px)
-      padding: 1em 1.5em
   &__contacts-group
-    height: 46px
-    @media (max-width: 767px)
-      height: 14px
+
   &__contacts-text
     font-weight: 300
     font-size: 12px
@@ -142,24 +142,21 @@ p
     font-size: 22px
     @media (max-width: 768px)
       font-size: 18px
-  &__description
-    height: 34em
-    width: 62em
-    margin-top: -17em
-    margin-left: -31em
+  &__btn
+    padding: 16px 26px
+    font-weight: 400
+    font-size: 14px
+    text-transform: uppercase
     color: #fff
-    z-index: 2
+    @media (max-width: 768px)
+      padding: 10px 26px
+.header-bottom
+  &__description
+    height: 550px
+    color: #fff
     @media (max-width: 992px)
-      height: 24em
-      width: 46em
-      margin-top: -12em
-      margin-left: -23em
       text-align: center
     @media (max-width: 768px)
-      height: 20em
-      width: 20em
-      margin-top: -10em
-      margin-left: -10em
       text-align: center
   &__text
     @media (max-width: 768px)
