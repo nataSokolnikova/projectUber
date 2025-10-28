@@ -1,4 +1,5 @@
-@use 'variables'
+@use 'sass:color'
+@use 'variables' as*
 
 =btn($bg, $color)
   font-size: 11px
@@ -31,7 +32,7 @@
   font-size: $font-size-body
 
 @function color-hover($color)
-  @return darken($color, 10%)
+  @return color.adjust($color, $lightness: -10%)
 
 
 body
@@ -83,17 +84,36 @@ p
     box-shadow: none
   &__menu-btn:focus
     outline: none
-    box-shadow: none;
+    box-shadow: none
   &__menu-btn:active
     outline: none
-    box-shadow: none;
+    box-shadow: none
   &__ul
     display: flex
-    gap: 60px
+    justify-content: space-between
+    align-items: stretch
+    width: 100%
+    padding: 0
+    margin: 0
+  &__li
+    flex: 1
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    &:not(:last-child)
+      border-right: 1px dashed #000
   &__a
+    display: block
+    width: 100%
     color: #fff
     text-decoration: none
-    transition: color 0.3s;
+    transition: color 0.3s
+    font-size: 15px
+    @media (max-width: 1400px)
+      font-size: 13px
+    @media (max-width: 1200px)
+      font-size: 10px
 
 .header-middle
   background: rgba(0, 0, 0, .5)
@@ -107,18 +127,30 @@ p
   &__contacts-tel
     font-weight: 400
     font-size: 22px
+    @media (max-width: 1400px)
+      font-size: 16px
+    @media (max-width: 992px)
+      font-size: 11px
     @media (max-width: 768px)
       font-size: 18px
+    @media (max-width: 768px)
+      font-size: 14px
   &__btn
-    padding: 16px 26px
     font-weight: 400
-    font-size: 14px
     text-transform: uppercase
     color: #fff
+    padding: 16px 26px
+    font-size: 14px
+    @media (max-width: 1200px)
+      padding: 16px 18px
+      font-size: 10px
+    @media (max-width: 992px)
+      padding: 16px 10px
+      font-size: 9px
     @media (max-width: 768px)
       padding: 10px 26px
     &:hover
-    background-color: color-hover(#1EACC7)
+      background-color: color-hover(#1EACC7)
 
 .header-bottom
   &__description
@@ -250,11 +282,27 @@ p
       text-decoration: underline
 
 .footer-section
+  &::before
+    content: ""
+    position: absolute
+    top: 20px
+    left: 50%
+    transform: translateX(-50%)
+    width: 300px
+    height: 7px
+    background-color: #1FBAD6
+    @media (max-width: 768px)
+      width: 243px
+      height: 6px
+  &__nav
+    width: 100%
   &__link-nav
     text-transform: uppercase
     color: $prim-link-color
     font-size: $font-size-body
     font-weight: 500
+  &__info
+    width: 100%
   &__link-info
     text-transform: uppercase
     color: $link-color
@@ -270,20 +318,21 @@ p
       justify-content: center
       margin-bottom: 24px
   &__icon
-    width: 35px
-    height: 35px
+    width: 2.2em
+    height: 2.2em
   &__sponsors
     position: absolute
     right: 24px
     top: 50%
     transform: translateY(-50%)
-    @media (max-width: 1200px)
-      weight: 247px
     @media (max-width: 768px)
       position: static
       display: flex
       justify-content: center
       margin-bottom: 30px
+  &__sponsor
+    @media (max-width: 1200px)
+      width: 246px
   &__lang
     font-size: 11px
     color: $accent-color
