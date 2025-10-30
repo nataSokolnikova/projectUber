@@ -10,7 +10,7 @@
 </head>
 <body>
   <header class="header-bg">
-    <div class="container-fluid header-top">
+    <section class="header-top">
       <div class="container">
         <div class="row">
           <nav class="header-top-nav col-11 offset-1 navbar navbar-expand-lg navbar-dark">
@@ -20,23 +20,23 @@
               <span class="header-top-nav__gamburger navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <ul class="header-top-nav__ul navbar-nav mx-auto">
-                <li class="nav-item header-top-nav__li text-center">
+              <ul class="row header-top-nav__ul navbar-nav mx-auto">
+                <li class="nav-item header-top-nav__li col-md-auto text-center">
                   <a class="header-top-nav__a nav-link" aria-current="page" href="#">Главная</a>
                 </li>
-                <li class="nav-item header-top-nav__li text-center">
+                <li class="nav-item header-top-nav__li col-md-auto text-center">
                   <a class="header-top-nav__a nav-link" href="#">Со своим автомобилем</a>
                 </li>
-                <li class="nav-item header-top-nav__li text-center">
+                <li class="nav-item header-top-nav__li col-md-auto text-center">
                   <a class="header-top-nav__a nav-link" href="#">На автомобиле компании</a>
                 </li>
-                <li class="nav-item header-top-nav__li text-center">
+                <li class="nav-item header-top-nav__li col-md-auto text-center">
                   <a class="header-top-nav__a nav-link" href="#">Требования</a>
                 </li>
-                <li class="nav-item header-top-nav__li text-center">
+                <li class="nav-item header-top-nav__li col-md-auto text-center">
                   <a class="header-top-nav__a nav-link" href="#">Контакты</a>
                 </li>
-                <li class="nav-item header-top-nav__li text-center">
+                <li class="nav-item header-top-nav__li col-md-auto text-center">
                   <a class="header-top-nav__a nav-link" href="#">Оставить заявку</a>
                 </li>
               </ul>
@@ -44,23 +44,23 @@
           </nav>
         </div>
       </div>
-    </div>
-    <div class="container-fluid header-middle">
+    </section>
+    <section class="header-middle">
       <div class="container">
         <div class="row">
           <div class="header-middle__contacts col-4 offset-7">
             <div class="row flex-column flex-md-row">
-              <div class="col">
+              <div class="col d-flex align-items-center">
                 <div class="header-middle__contacts-group">
                   <div class="header-middle__contacts-text-off d-none d-md-block">
-                    <p class="header-middle__contacts-text text-md-center">Звоните нам ежедневно</p>
+                    <p class="header-middle__contacts-text text-md-center d-none d-md-block">Звоните нам ежедневно</p>
                   </div>
                   <div>
-                    <p class="header-middle__contacts-tel text-md-center">+38099- 000-000-00</p>
+                    <p class="header-middle__contacts-tel text-md-center mb-0">+38099- 000-000-00</p>
                   </div>
                 </div>
               </div>
-              <div class="col">
+              <div class="col d-flex align-items-center">
                 <button type="button" class="btn-gradient header-middle__btn">
                   Заказать звонок
                 </button>
@@ -69,8 +69,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="container header-bottom">
+    </section>
+    <section class="container header-bottom">
       <div class="row justify-content-center">
         <div class="header-bottom__description col-10 d-flex flex-column align-items-center justify-content-around">
           <div class="header-bottom__info d-flex flex-column align-items-center">
@@ -94,11 +94,11 @@
           </button>
         </div>
       </div>
-    </div>
+    </section>
   </header>
 
   <main>
-    <section class="main-first main-section">
+    <section class="wrapper-first main-section">
       <div class="container-md">
         <div class="row">
           <div class="col-8 offset-2 text-center mb-4 mt-4">
@@ -108,7 +108,7 @@
         </div>
         <div class="row flex-column flex-md-row">
           <div class="col">
-            <div class="row flex-column justify-content-center">
+            <div class="row main-first flex-column justify-content-center">
               <div class="main-first__benefit-card col card mb-3">
                 <div class="row g-0">
                   <div class="col-md-4 d-flex align-items-center justify-content-center">
@@ -243,7 +243,7 @@
       </div>
     </section>
 
-    <section class="main-second main-section">
+    <section class="wrapper-second main-section">
       <div class="container mb-5">
         <div class="row">
           <div class="col-8 offset-2 text-center mb-4 mt-4">
@@ -253,9 +253,9 @@
               мобильный телефон</p>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 justify-content-between">
-            <div class="col">
-              <div class="card text-bg-dark main-second__item-card mb-4">
+        <div class="row main-second row-cols-1 row-cols-md-3">
+            <div class="col mb-4 mr-4">
+              <div class="card text-bg-dark main-second__item-card">
                 <img src="./img/Карточка 1.png" class="card-img" alt="...">
                 <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
                   <h5 class="card-title main-second__name text-center">оформление заказа одним касанием</h5>
@@ -265,8 +265,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card text-bg-dark main-second__item-card mb-4">
+            <div class="col mb-4 mr-4">
+              <div class="card text-bg-dark main-second__item-card">
                 <img src="./img/Карточка 2.png" class="card-img" alt="...">
                 <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
                   <h5 class="card-title main-second__name text-center">надежная подача</h5>
@@ -276,8 +276,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card text-bg-dark main-second__item-card mb-4">
+            <div class="col mb-4 mr-4">
+              <div class="card text-bg-dark main-second__item-card">
                 <img src="./img/Карточка 3.png" class="card-img" alt="...">
                 <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
                   <h5 class="card-title main-second__name text-center">прозрачные цены</h5>
@@ -287,8 +287,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card text-bg-dark main-second__item-card mb-3">
+            <div class="col mb-4 mr-4">
+              <div class="card text-bg-dark main-second__item-card">
                 <img src="./img/Карточка 4.png" class="card-img" alt="...">
                 <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
                   <h5 class="card-title main-second__name text-center">безналичная оплата</h5>
@@ -298,8 +298,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card text-bg-dark main-second__item-card mb-3">
+            <div class="col mb-4 mr-4">
+              <div class="card text-bg-dark main-second__item-card">
                 <img src="./img/Карточка 5.png" class="card-img" alt="...">
                 <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
                   <h5 class="card-title main-second__name text-center">обратная связь</h5>
@@ -309,8 +309,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card text-bg-dark main-second__item-card mb-3">
+            <div class="col mb-4">
+              <div class="card text-bg-dark main-second__item-card">
                 <img src="./img/Карточка 6.png" class="card-img" alt="...">
                 <div class="card-img-overlay d-flex flex-column align-items-center justify-content-around">
                   <h5 class="card-title main-second__name text-center">разделить стоимость поездки</h5>
@@ -324,16 +324,16 @@
       </div>
     </section>
 
-    <section class="main-third main-section">
+    <section class="wrapper-third main-section">
       <div class="container mb-5">
         <div class="row">
           <div class="col-8 offset-2 text-center mb-4 mt-4">
             <button type="button" class="btn main-section__btn_white">возможности</button>
-            <h2 class="subtitle main-section__subtitle_white main-third__subtitle-car">Выбор - отличная штука!</h2>
-            <p class="text main-section__text_white main-third__text-car">Закажите автомобиль, который подходит вам по стилю и бюджету</p>
+            <h2 class="subtitle main-section__subtitle_white wrapper-third__subtitle-car">Выбор - отличная штука!</h2>
+            <p class="text main-section__text_white wrapper-third__text-car">Закажите автомобиль, который подходит вам по стилю и бюджету</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row main-third">
           <div class="col-8 offset-2 text-center">
             <figure class="figure main-third__car">
               <img src="./img/Автомобиль.png" class="figure-img img-fluid  rounded main-third__img-car" alt="car">
@@ -345,7 +345,7 @@
       </div>
     </section>
 
-    <section class="main-fourth main-section">
+    <section class="wrapper-fourth main-section">
       <div class="container-md mb-5">
         <div class="row">
           <div class="col-8 offset-2 text-center mb-4 mt-4">
@@ -353,7 +353,7 @@
             <h2 class="subtitle main-section__subtitle_black">условия и требования</h2>
           </div>
         </div>
-        <div class="row flex-column flex-md-row">
+        <div class="row main-fourth flex-column flex-md-row">
           <div class="col">
             <div class="main-fourth__cheklist-info mb-4 mb-md-5">
               <h4 class="main-fourth__listname_blue listname">УСЛОВИЯ: со своим авто:</h4>
@@ -383,7 +383,7 @@
             </div>
           </div>
         </div>
-        <div class="row flex-column flex-md-row">
+        <div class="row main-fourth flex-column flex-md-row">
           <div class="col">
             <div class="main-fourth__cheklist-info mb-4 mb-md-5">
               <h4 class="main-fourth__listname_red listname">ТРЕБОВАНИЕ:</h4>
@@ -414,8 +414,8 @@
       </div>
     </section>
 
-    <section class="main-fifth main-section">
-      <div class="container main-fifth__block d-flex flex-column justify-content-between">
+    <section class="wrapper-fifth main-section">
+      <div class="container main-fifth d-flex flex-column justify-content-between">
         <div class="row">
           <div class="col-8 offset-2 text-center mb-4 mt-4">
             <button type="button" class="btn main-section__btn_white">города</button>
@@ -435,32 +435,32 @@
     <div class="container">
       <div class="row footer-section__teil">
         <div class="col-12 col-md-5 offset-md-4">
-          <ul class="row footer-section__nav list-unstyled mb-2 mt-5 justify-content-around">
-            <li class="col">
-              <a href="#" class="col footer-section__link-nav text-decoration-none">на главную</a>
+          <ul class="row navigation-list list-unstyled mb-2 mt-5 justify-content-center justify-content-md-around">
+            <li class="col-auto">
+              <a href="#" class="col navigation-list__link-nav text-decoration-none">на главную</a>
             </li>
-            <li class="col">
-              <a href="#" class="col footer-section__link-nav text-decoration-none">города</a>
+            <li class="col-auto">
+              <a href="#" class="col navigation-list__link-nav text-decoration-none">города</a>
             </li>
-            <li class="col">
-              <a href="#" class="col footer-section__link-nav text-decoration-none">для водителей</a>
+            <li class="col-auto">
+              <a href="#" class="col navigation-list__link-nav text-decoration-none">для водителей</a>
             </li>
           </ul>
-          <ul class="row footer-section__info list-unstyled mb-2 justify-content-between">
+          <ul class="row info-list list-unstyled mb-2 justify-content-center justify-content-md-between">
             <li class="col-auto">
-              <a href="#" class="col footer-section__link-info text-decoration-none">центр поддержки</a>
+              <a href="#" class="col info-list__link-info text-decoration-none">центр поддержки</a>
             </li>
-            <li class="col">
-              <a href="#" class="col footer-section__link-info text-decoration-none">вакансии</a>
+            <li class="col-auto">
+              <a href="#" class="col info-list__link-info text-decoration-none">вакансии</a>
             </li>
-            <li class="col">
-              <a href="#" class="col footer-section__link-info text-decoration-none">разработчики</a>
+            <li class="col-auto">
+              <a href="#" class="col info-list__link-info text-decoration-none">разработчики</a>
             </li>
-            <li class="col">
-              <a href="#" class="col footer-section__link-info text-decoration-none">блог</a>
+            <li class="col-auto">
+              <a href="#" class="col info-list__link-info text-decoration-none">блог</a>
             </li>
-            <li class="col">
-              <a href="#" class="col footer-section__link-info text-decoration-none">о нас</a>
+            <li class="col-auto">
+              <a href="#" class="col info-list__link-info text-decoration-none">о нас</a>
             </li>
           </ul>
           <div class="row justify-content-center mb-4">

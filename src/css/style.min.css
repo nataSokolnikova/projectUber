@@ -1,11 +1,9 @@
-p {
+body {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
   color: #202020;
 }
 
@@ -96,20 +94,20 @@ h4 {
 .header-top-nav__li:not(:last-child) {
   border-right: 1px dashed #000;
 }
+@media (max-width: 992px) {
+  .header-top-nav__li:not(:last-child) {
+    border-right: none;
+  }
+}
 .header-top-nav__a {
   display: block;
   width: 100%;
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
-  font-size: 15px;
+  font-size: 13px;
 }
 @media (max-width: 1400px) {
-  .header-top-nav__a {
-    font-size: 13px;
-  }
-}
-@media (max-width: 1200px) {
   .header-top-nav__a {
     font-size: 10px;
   }
@@ -143,11 +141,6 @@ h4 {
 }
 @media (max-width: 768px) {
   .header-middle__contacts-tel {
-    font-size: 18px;
-  }
-}
-@media (max-width: 768px) {
-  .header-middle__contacts-tel {
     font-size: 14px;
   }
 }
@@ -158,7 +151,7 @@ h4 {
   padding: 16px 26px;
   font-size: 14px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .header-middle__btn {
     padding: 16px 18px;
     font-size: 10px;
@@ -219,7 +212,7 @@ h4 {
     padding: 10px 26px;
   }
 }
-.header-bottom__btn-btn-big {
+.header-bottom__btn-big {
   font-size: 18px;
 }
 
@@ -260,9 +253,10 @@ h4 {
   color: #fff;
 }
 
-.main-first {
+.wrapper-first {
   background-color: #fff;
 }
+
 .main-first__benefit-card {
   border: none;
   min-height: 350px;
@@ -279,13 +273,14 @@ h4 {
   color: #1EACC7;
 }
 
-.main-second {
+.wrapper-second {
   border: 1px solid rgba(30, 172, 199, 0.15);
   background-image: url("../img/mobile_bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .main-second__item-card {
   border-radius: 0;
 }
@@ -305,32 +300,32 @@ h4 {
   border-radius: 50%;
 }
 
-.main-third {
+@media (max-width: 768px) {
+  .wrapper-third__subtitle-car {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper-third__text-car {
+    display: none;
+  }
+}
+.wrapper-third {
   background: linear-gradient(#070716 60%, transparent 60%), url("../img/mobile_bg.png") no-repeat center bottom/cover;
 }
 @media (max-width: 768px) {
-  .main-third {
+  .wrapper-third {
     background: #070716;
     height: auto;
   }
 }
-.main-third__description-car {
+.wrapper-third .main-third__description-car {
   font-size: 17px;
   color: #222222;
 }
 @media (max-width: 768px) {
-  .main-third__description-car {
+  .wrapper-third .main-third__description-car {
     color: #fff;
-  }
-}
-@media (max-width: 768px) {
-  .main-third__subtitle-car {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .main-third__text-car {
-    display: none;
   }
 }
 
@@ -359,17 +354,18 @@ h4 {
   vertical-align: middle;
 }
 
-.main-fifth {
+.wrapper-fifth {
   background-image: url("../img/world_bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.main-fifth__block {
+
+.main-fifth {
   min-height: 720px;
 }
 @media (max-width: 768px) {
-  .main-fifth__block {
+  .main-fifth {
     min-height: 360px;
   }
 }
@@ -400,22 +396,15 @@ h4 {
     height: 6px;
   }
 }
-.footer-section__nav {
-  width: 100%;
-}
-.footer-section__link-nav {
+.footer-section__lang {
+  color: #1EACC7;
   text-transform: uppercase;
-  color: #070716;
-  font-size: 15px;
-  font-weight: 500;
-}
-.footer-section__info {
-  width: 100%;
-}
-.footer-section__link-info {
-  text-transform: uppercase;
-  color: #999999;
   font-size: 11px;
+}
+@media (max-width: 1400px) {
+  .footer-section__lang {
+    font-size: 10px;
+  }
 }
 .footer-section__socials {
   position: absolute;
@@ -449,13 +438,35 @@ h4 {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .footer-section__sponsor {
     width: 246px;
   }
 }
-.footer-section__lang {
-  font-size: 11px;
-  color: #1EACC7;
+.footer-section .navigation-list {
+  width: 100%;
+}
+.footer-section .navigation-list__link-nav {
   text-transform: uppercase;
+  font-weight: 500;
+  color: #070716;
+  font-size: 15px;
+}
+@media (max-width: 992px) {
+  .footer-section .navigation-list__link-nav {
+    font-size: 10px;
+  }
+}
+.footer-section .info-list {
+  width: 100%;
+}
+.footer-section .info-list__link-info {
+  text-transform: uppercase;
+  color: #999999;
+  font-size: 11px;
+}
+@media (max-width: 1400px) {
+  .footer-section .info-list__link-info {
+    font-size: 8px;
+  }
 }

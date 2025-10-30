@@ -34,10 +34,11 @@
 @function color-hover($color)
   @return color.adjust($color, $lightness: -10%)
 
+@function text-color($color) 
+  @return $color
 
 body
-  font-family: $font-family-body
-  font-size: $font-size-body
+  @extend %text-default
   color: $primary-color
 
 h1
@@ -61,9 +62,6 @@ h4
   @media (max-width: 992px)
     font-size: 19px
   margin-bottom: 20px
-
-p
-  @extend %text-default
 
 .btn-gradient
   background: linear-gradient(to bottom, #4CE2FF, #1EACC7)
@@ -103,16 +101,16 @@ p
     justify-content: center
     &:not(:last-child)
       border-right: 1px dashed #000
+      @media (max-width: 992px)
+        border-right: none
   &__a
     display: block
     width: 100%
     color: #fff
     text-decoration: none
     transition: color 0.3s
-    font-size: 15px
+    font-size: 13px
     @media (max-width: 1400px)
-      font-size: 13px
-    @media (max-width: 1200px)
       font-size: 10px
 
 .header-middle
@@ -132,8 +130,6 @@ p
     @media (max-width: 992px)
       font-size: 11px
     @media (max-width: 768px)
-      font-size: 18px
-    @media (max-width: 768px)
       font-size: 14px
   &__btn
     font-weight: 400
@@ -141,7 +137,7 @@ p
     color: #fff
     padding: 16px 26px
     font-size: 14px
-    @media (max-width: 1200px)
+    @media (max-width: 1400px)
       padding: 16px 18px
       font-size: 10px
     @media (max-width: 992px)
@@ -176,7 +172,7 @@ p
     color: #fff
     @media (max-width: 768px)
       padding: 10px 26px
-  &__btn-btn-big
+  &__btn-big
     font-size: 18px
 
 .main-section
@@ -193,8 +189,10 @@ p
   &__text_white
     +text($secondary-color)
 
-.main-first
+.wrapper-first
   background-color: #fff
+
+.main-first
   &__benefit-card
     border: none
     min-height: 350px
@@ -208,12 +206,14 @@ p
   font-size: 17px
   color: #1EACC7
 
-.main-second
+.wrapper-second
   border: 1px solid rgba(30, 172, 199, 0.15)
   background-image: url('../img/mobile_bg.png')
   background-size: cover
   background-position: center
   background-repeat: no-repeat
+
+.main-second
   &__item-card
     border-radius: 0
   &__img-btn
@@ -229,22 +229,24 @@ p
   padding: 0
   border-radius: 50%
 
-.main-third
-  background: linear-gradient(#070716 60%, transparent 60%), url('../img/mobile_bg.png') no-repeat center bottom / cover
-  @media (max-width: 768px)
-    background: #070716
-    height: auto
-  &__description-car
-    font-size: 17px
-    color: #222222
-    @media (max-width: 768px)
-      color: $secondary-color
+.wrapper-third
   &__subtitle-car
     @media (max-width: 768px)
       display: none
   &__text-car
     @media (max-width: 768px)
       display: none
+  background: linear-gradient(#070716 60%, transparent 60%), url('../img/mobile_bg.png') no-repeat center bottom / cover
+  @media (max-width: 768px)
+    background: #070716
+    height: auto
+  
+  .main-third
+    &__description-car
+      font-size: 17px
+      color: #222222
+      @media (max-width: 768px)
+        color: $secondary-color
 
 .main-fourth
   &__listname_blue
@@ -263,15 +265,15 @@ p
     line-height: 1.5
     vertical-align: middle 
 
-.main-fifth
+.wrapper-fifth
   background-image: url('../img/world_bg.png')
   background-size: cover
   background-position: center
   background-repeat: no-repeat
-  &__block
-    min-height: 720px
-    @media (max-width: 768px)
-      min-height: 360px
+.main-fifth
+  min-height: 720px
+  @media (max-width: 768px)
+    min-height: 360px
   &__link-transperent
     font-size: 15px
     text-transform: uppercase
@@ -294,19 +296,12 @@ p
     @media (max-width: 768px)
       width: 243px
       height: 6px
-  &__nav
-    width: 100%
-  &__link-nav
+  &__lang
+    color: $accent-color
     text-transform: uppercase
-    color: $prim-link-color
-    font-size: $font-size-body
-    font-weight: 500
-  &__info
-    width: 100%
-  &__link-info
-    text-transform: uppercase
-    color: $link-color
     font-size: 11px
+    @media (max-width: 1400px)
+      font-size: 10px
   &__socials
     position: absolute
     left: 24px
@@ -331,9 +326,23 @@ p
       justify-content: center
       margin-bottom: 30px
   &__sponsor
-    @media (max-width: 1200px)
+    @media (max-width: 1400px)
       width: 246px
-  &__lang
-    font-size: 11px
-    color: $accent-color
-    text-transform: uppercase
+
+  .navigation-list
+    width: 100%
+    &__link-nav
+      text-transform: uppercase
+      font-weight: 500
+      color: $prim-link-color
+      font-size: $font-size-body
+      @media (max-width: 992px)
+        font-size: 10px
+  .info-list
+    width: 100%
+    &__link-info
+      text-transform: uppercase
+      color: $link-color
+      font-size: 11px
+      @media (max-width: 1400px)
+        font-size: 8px
