@@ -1,6 +1,7 @@
 @use 'sass:color'
 @use 'variables' as*
 
+// Миксины
 =btn($bg, $color)
   font-size: 11px
   color: $color
@@ -16,9 +17,6 @@
   color: $color
   text-transform: uppercase
 
-=text($color)
-  color: $color
-
 =listname($color)
   color: $color
   font-weight: 400
@@ -27,20 +25,28 @@
   list-style-image: url(#{$icon-path})
   margin: 0
 
+// Групповые селекторы
 %text-default
   font-family: $font-family-body
-  font-size: $font-size-body
+  color: $primary-color
 
+%text-accent-link
+  color: $accent-color
+  text-transform: uppercase
+
+// Функции
 @function color-hover($color)
   @return color.adjust($color, $lightness: -10%)
 
 @function text-color($color) 
   @return $color
 
+// Основные стили
 body
   @extend %text-default
-  color: $primary-color
+  font-size: $font-size-body
 
+// Заголовки с индивидуальными размерами
 h1
   font-size: 48px
   @media (max-width: 992px)
@@ -63,9 +69,11 @@ h4
     font-size: 19px
   margin-bottom: 20px
 
+// Общий стиль для кнопки в header
 .btn-gradient
   background: linear-gradient(to bottom, #4CE2FF, #1EACC7)
 
+// Стили для header
 .header-bg
   background-image: url('../img/uber_bg.png')
   background-size: cover
@@ -86,32 +94,35 @@ h4
   &__menu-btn:active
     outline: none
     box-shadow: none
-  &__ul
+
+// Стилизация навигационного списка в header-top
+  .primary-nav
     display: flex
     justify-content: space-between
     align-items: stretch
     width: 100%
     padding: 0
     margin: 0
-  &__li
-    flex: 1
-    text-align: center
-    display: flex
-    align-items: center
-    justify-content: center
-    &:not(:last-child)
-      border-right: 1px dashed #000
-      @media (max-width: 992px)
-        border-right: none
-  &__a
-    display: block
-    width: 100%
-    color: #fff
-    text-decoration: none
-    transition: color 0.3s
-    font-size: 13px
-    @media (max-width: 1400px)
-      font-size: 10px
+    &__li
+      flex: 1
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+      &:not(:last-child)
+        padding-right: 15px
+        border-right: 1px dashed #000
+        @media (max-width: 992px)
+          border-right: none
+    &__a
+      display: block
+      width: 100%
+      color: #fff
+      text-decoration: none
+      transition: color 0.3s
+      font-size: 13px
+      @media (max-width: 1400px)
+        font-size: 10px
 
 .header-middle
   background: rgba(0, 0, 0, .5)
@@ -124,13 +135,6 @@ h4
     margin: 0
   &__contacts-tel
     font-weight: 400
-    font-size: 22px
-    @media (max-width: 1400px)
-      font-size: 16px
-    @media (max-width: 992px)
-      font-size: 11px
-    @media (max-width: 768px)
-      font-size: 14px
   &__btn
     font-weight: 400
     text-transform: uppercase
@@ -175,6 +179,7 @@ h4
   &__btn-big
     font-size: 18px
 
+// Стили для main
 .main-section
   &__btn_black
     +btn($bg-color, $secondary-color)
@@ -185,10 +190,11 @@ h4
   &__subtitle_white
     +subtitle($secondary-color)
   &__text_black
-    +text($primary-color)
+    color: text-color($primary-color)
   &__text_white
-    +text($secondary-color)
+    color: text-color($secondary-color)
 
+// Стилизация первой секции main
 .wrapper-first
   background-color: #fff
 
@@ -206,6 +212,7 @@ h4
   font-size: 17px
   color: #1EACC7
 
+// Стилизация второй секции main
 .wrapper-second
   border: 1px solid rgba(30, 172, 199, 0.15)
   background-image: url('../img/mobile_bg.png')
@@ -229,6 +236,7 @@ h4
   padding: 0
   border-radius: 50%
 
+// Стилизация третьей секции main
 .wrapper-third
   &__subtitle-car
     @media (max-width: 768px)
@@ -248,6 +256,7 @@ h4
       @media (max-width: 768px)
         color: $secondary-color
 
+// Стилизация четвертой секции main
 .main-fourth
   &__listname_blue
     +listname($accent-color)
@@ -265,6 +274,7 @@ h4
     line-height: 1.5
     vertical-align: middle 
 
+// Стилизация пятой секции main
 .wrapper-fifth
   background-image: url('../img/world_bg.png')
   background-size: cover
@@ -275,14 +285,14 @@ h4
   @media (max-width: 768px)
     min-height: 360px
   &__link-transperent
+    @extend %text-accent-link
     font-size: 15px
-    text-transform: uppercase
     text-decoration: none
     cursor: pointer
-    color: $accent-color
     &:hover
       text-decoration: underline
 
+// Стили для footer
 .footer-section
   &::before
     content: ""
@@ -297,8 +307,7 @@ h4
       width: 243px
       height: 6px
   &__lang
-    color: $accent-color
-    text-transform: uppercase
+    @extend %text-accent-link
     font-size: 11px
     @media (max-width: 1400px)
       font-size: 10px
@@ -315,6 +324,9 @@ h4
   &__icon
     width: 2.2em
     height: 2.2em
+    @media (max-width: 992px)
+      width: 1.8em
+      height: 1.8em
   &__sponsors
     position: absolute
     right: 24px
@@ -327,22 +339,29 @@ h4
       margin-bottom: 30px
   &__sponsor
     @media (max-width: 1400px)
-      width: 246px
+      width: 15em
+    @media (max-width: 992px)
+      width: 11em
 
+// Стилизация навигационного списка в footer
   .navigation-list
     width: 100%
     &__link-nav
       text-transform: uppercase
       font-weight: 500
-      color: $prim-link-color
       font-size: $font-size-body
       @media (max-width: 992px)
         font-size: 10px
+    &__link-nav a
+      color: $prim-link-color
+
+// Стилизация навигационного списка в footer
   .info-list
     width: 100%
     &__link-info
       text-transform: uppercase
-      color: $link-color
       font-size: 11px
-      @media (max-width: 1400px)
+      @media (max-width: 992px)
         font-size: 8px
+    &__link-info a
+      color: $link-color
