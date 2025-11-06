@@ -3,7 +3,7 @@
 
 // Миксины
 =btn($bg, $color)
-  font-size: 11px
+  font-size: 0,69em
   color: $color
   background-color: $bg
   border-radius: 0
@@ -48,26 +48,36 @@ body
 
 // Заголовки с индивидуальными размерами
 h1
-  font-size: 48px
+  font-size: 3em
   @media (max-width: 992px)
-    font-size: 40px
+    font-size: 2.5em
 
 h2
-  font-size: 38px
+  font-size: 2.375em
   font-weight: 700
   @media (max-width: 768px)
-    font-size: 16px
+    font-size: 1em
 
 h3
-  font-size: 28px
+  font-size: 1.75em
   @media (max-width: 992px)
-    font-size: 20px
+    font-size: 1.25em
 
 h4
-  font-size: 22px
+  font-size: 1.375em
   @media (max-width: 992px)
-    font-size: 19px
-  margin-bottom: 20px
+    font-size: 1.188em
+  margin-bottom: 1.25em
+
+h5
+  font-size: 1.5em
+  @media (max-width: 992px)
+    font-size: 1.25em
+
+p
+  font-size: 1em
+  @media (max-width: 992px)
+    font-size: 1.25em
 
 // Общий стиль для кнопки в header
 .btn-gradient
@@ -75,10 +85,11 @@ h4
 
 // Стили для header
 .header-bg
-  background-image: url('../img/uber_bg.png')
-  background-size: cover
-  background-position: center
-  background-repeat: no-repeat
+  background:
+    image: url('../img/uber_bg.png')
+    size: cover
+    position: center
+    repeat: no-repeat
   width: 100%
 
 .header-top
@@ -97,19 +108,17 @@ h4
 
   .primary-nav
     display: flex
-    justify-content: space-between
+    justify-content: center
     align-items: stretch
     width: 100%
     padding: 0
     margin: 0
     &__li
-      flex: 1
       text-align: center
       display: flex
       align-items: center
       justify-content: center
       &:not(:last-child)
-        padding-right: 15px
         border-right: 1px dashed #000
         @media (max-width: 992px)
           border-right: none
@@ -119,9 +128,10 @@ h4
       color: #fff
       text-decoration: none
       transition: color 0.3s
-      font-size: 13px
+      padding: 0.938em
+      font-size: 1em
       @media (max-width: 1400px)
-        font-size: 10px
+        font-size: 0.813em
 
 .header-middle
   background: rgba(0, 0, 0, .5)
@@ -130,7 +140,7 @@ h4
     color: #fff
   &__contacts-text
     font-weight: 300
-    font-size: 12px
+    font-size: 0.75em
     margin: 0
   &__contacts-tel
     font-weight: 400
@@ -138,16 +148,16 @@ h4
     font-weight: 400
     text-transform: uppercase
     color: #fff
-    padding: 16px 26px
+    padding: 1em 1.625em
     font-size: 14px
     @media (max-width: 1400px)
-      padding: 16px 18px
-      font-size: 10px
+      padding: 1em 18px
+      font-size: 0.625em
     @media (max-width: 992px)
-      padding: 16px 10px
-      font-size: 9px
+      padding: 1em 0.625em
+      font-size: 0.563em
     @media (max-width: 768px)
-      padding: 10px 26px
+      padding: 0.625em 1.625em
     &:hover
       background-color: color-hover(#1EACC7)
 
@@ -163,20 +173,20 @@ h4
     @media (max-width: 768px)
       display: none
   &__paragraph
-    font-size: 18px
+    font-size: 1.125em
     font-weight: 400
     @media (max-width: 992px)
-       font-size: 14px
+       font-size: 0.875em
   &__btn
-    padding: 16px 26px
+    padding: 1em 1.625em
     font-weight: 400
-    font-size: 14px
+    font-size: 0.875em
     text-transform: uppercase
     color: #fff
     @media (max-width: 768px)
-      padding: 10px 26px
+      padding: 0.625em 1.625em
   &__btn-big
-    font-size: 18px
+    font-size: 1.125em
 
 // Стили для main
 .main-section
@@ -200,28 +210,34 @@ h4
 .main-first
   &__benefit-card
     border: none
-    min-height: 350px
+    min-height: 21.875em
+    @media (max-width: 992px)
+      min-height: 30.875em
+    @media (max-width: 768px)
+      min-height: 23.875em
   &__icon
     display: block
     border-radius: 50%
-    width: 116px
-    height: 116px
+    width: 7.25em
+    height: 7.25em
 
 .card-title.main-first__title
-  font-size: 17px
+  font-size: 1.063
   color: #1EACC7
 
 // Стилизация второй секции main
 .wrapper-second
   border: 1px solid rgba(30, 172, 199, 0.15)
-  background-image: url('../img/mobile_bg.png')
-  background-size: cover
-  background-position: center
-  background-repeat: no-repeat
+  background:
+    image: url('../img/mobile_bg.png')
+    size: cover
+    position: center
+    repeat: no-repeat
 
 .main-second
   &__item-card
     border-radius: 0
+    overflow: hidden
   &__img-btn
     width: 100%
     height: 100%
@@ -250,7 +266,7 @@ h4
   
   .main-third
     &__description-car
-      font-size: 17px
+      font-size: 1.063em
       color: #222222
       @media (max-width: 768px)
         color: $secondary-color
@@ -268,24 +284,25 @@ h4
   &__cheklist-item
     padding-left: 0.5em
     font-weight: 300
-    font-size: 17px
-    margin-bottom: 8px
+    font-size: 1.063em
+    margin-bottom: 0.5em
     line-height: 1.5
     vertical-align: middle 
 
 // Стилизация пятой секции main
 .wrapper-fifth
-  background-image: url('../img/world_bg.png')
-  background-size: cover
-  background-position: center
-  background-repeat: no-repeat
+  background:
+    image: url('../img/world_bg.png')
+    size: cover
+    position: center
+    repeat: no-repeat
 .main-fifth
   min-height: 720px
   @media (max-width: 768px)
-    min-height: 360px
+    min-height: 22.5em
   &__link-transperent
     @extend %text-accent-link
-    font-size: 15px
+    font-size: 0.938em
     text-decoration: none
     cursor: pointer
     &:hover
@@ -296,30 +313,30 @@ h4
   &::before
     content: ""
     position: absolute
-    top: 20px
+    top: 1.25em
     left: 50%
     transform: translateX(-50%)
-    width: 300px
-    height: 7px
+    width: 18.75em
+    height: 0.438em
     background-color: #1FBAD6
     @media (max-width: 768px)
-      width: 243px
-      height: 6px
+      width: 15.188em
+      height: 0.375em
   &__lang
     @extend %text-accent-link
-    font-size: 11px
+    font-size: 0.688em
     @media (max-width: 1400px)
-      font-size: 10px
+      font-size: 0.625em
   &__socials
     position: absolute
-    left: 24px
+    left: 1.5em
     top: 50%
     transform: translateY(-50%)
     @media (max-width: 768px)
       position: static
       display: flex
       justify-content: center
-      margin-bottom: 24px
+      margin-bottom: 1.5
   &__icon
     width: 2.2em
     height: 2.2em
@@ -328,7 +345,7 @@ h4
       height: 1.8em
   &__sponsors
     position: absolute
-    right: 24px
+    right: 1.5em
     top: 50%
     transform: translateY(-50%)
     @media (max-width: 768px)
@@ -349,7 +366,7 @@ h4
       font-weight: 500
       font-size: $font-size-body
       @media (max-width: 992px)
-        font-size: 10px
+        font-size: 0.625em
     &__link-nav a
       color: $prim-link-color
 
@@ -357,7 +374,7 @@ h4
     width: 100%
     &__link-info
       text-transform: uppercase
-      font-size: 11px
+      font-size: 0.688
       @media (max-width: 992px)
         font-size: 8px
     &__link-info a
